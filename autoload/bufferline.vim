@@ -16,6 +16,7 @@ function! s:generate_names()
         let modified = g:bufferline_modified
       endif
       let fname = fnamemodify(bufname(i), g:bufferline_fname_mod)
+      let fname = fname !=# '' ? fname : g:bufferline_unnamed_buffer
       if g:bufferline_pathshorten != 0
         let fname = pathshorten(fname)
       endif

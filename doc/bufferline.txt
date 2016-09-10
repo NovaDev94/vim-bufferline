@@ -32,6 +32,10 @@ values):
   let g:bufferline_modified = '+'
 <
 
+* the default name for unnamed buffer
+>
+  let g:bufferline_unnamed_buffer = ''
+
 * denotes whether buffer numbers should be displayed
 >
   let g:bufferline_show_bufnr = 1
