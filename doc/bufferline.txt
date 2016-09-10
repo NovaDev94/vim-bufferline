@@ -17,14 +17,19 @@ values):
   let g:bufferline_echo = 1
 <
 
-* the separator used on the left side of a buffer
+* the separator used on the left side of active buffer
 >
   let g:bufferline_active_buffer_left = '['
 <
 
-* the separator used on the right side of a buffer
+* the separator used on the right side of active buffer
 >
   let g:bufferline_active_buffer_right = ']'
+<
+
+* the separator used between buffers
+>
+  let g:bufferline_separator = ' '
 <
 
 * the symbol to denote that a buffer is modified
@@ -35,6 +40,7 @@ values):
 * the default name for unnamed buffer
 >
   let g:bufferline_unnamed_buffer = ''
+
 
 * denotes whether buffer numbers should be displayed
 >
