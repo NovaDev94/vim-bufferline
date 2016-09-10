@@ -68,11 +68,14 @@ function! bufferline#get_echo_string()
 
   let names = s:generate_names()
   let line = ''
+  let index = -1
   for val in names
+    if val[0] == current
+      let index = strlen(line)
+    endif
     let line .= val[1]
   endfor
 
-  let index = match(line, '\V'.g:bufferline_status_info.current)
   let g:bufferline_status_info.count = len(names)
   let g:bufferline_status_info.before = strpart(line, 0, index)
   let g:bufferline_status_info.after = strpart(line, index + len(g:bufferline_status_info.current))
