@@ -10,7 +10,7 @@ function! s:generate_names()
   let last_buffer = bufnr('$')
   let current_buffer = bufnr('%')
   while i <= last_buffer
-    if bufexists(i) && buflisted(i)
+    if bufexists(i) && buflisted(i) && !(getbufvar(i, '&filetype') ==# 'qf')
       let modified = ''
       if getbufvar(i, '&mod')
         let modified = g:bufferline_modified
